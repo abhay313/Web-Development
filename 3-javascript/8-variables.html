@@ -1,0 +1,40 @@
+<html>
+
+  <head>
+
+      <title> Variables </title>
+
+  </head>
+
+  <body>
+
+    <input type="text" id="input">
+
+    <button id="changetext"> ChangeText </button>
+
+    <p id="changingtext"> This is some more text </p>
+
+    <script type="text/javascript">
+
+    //  var x = 5, name = "Abhay";
+
+      //alert(x + name);
+
+      document.getElementById("changetext").onclick = function(){
+
+        var content = document.getElementById("input").value;
+
+      //  alert(content);
+
+        document.getElementById("changingtext").innerHTML = content;
+
+      }
+
+
+
+
+    </script>
+
+  </body>
+
+</html>

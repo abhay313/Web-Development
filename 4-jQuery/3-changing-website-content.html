@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <title> Changing Website Content </title>
+
+    <script type="text/javascript" src="jquery.js"></script>
+
+    <style type="text/css">
+
+      #circle{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: green;
+        margin: 50px;
+      }
+
+      .square{
+        width: 150px;
+        height: 150px;
+        background-color: red;
+        margin: 50px;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <div id="circle"></div>
+
+    <div class="square"></div>
+
+    <p> This is a paragraph </p>
+
+    <iframe src="https://www.wikipedia.com" width="500px" height="500px;"></iframe>
+
+    <script type="text/javascript">
+
+  /*    $("#circle").click(function() {
+
+          $("p").html("This is changed text");
+
+      })
+
+      $(".square").click(function() {
+
+        alert($("p").html());
+
+      }) */
+
+      $(".square").hover(function(){
+
+        alert("hover");
+
+      })
+
+      $("#circle").hover(function() {
+
+        $("iframe").attr("src", "https://www.iiitkalyani.ac.in");
+
+      })
+
+    </script>
+
+
+
+  </body>
+
+</html>

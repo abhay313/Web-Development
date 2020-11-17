@@ -1,0 +1,51 @@
+<html>
+
+  <head>
+    <title> Arrays </title>
+  </head>
+
+  <body>
+
+    <script type="text/javascript">
+
+      var myArray = new Array();
+
+      myArray[0] = "pizza";
+
+      myArray[1] = "burger";
+
+      //  alert(myArray);
+
+      // console.log(myArray.length);
+
+      // console.log(myArray);
+
+      var tweets = ["Good Morning!!", "I love coffe", "Nobody cares about us"];
+
+      // alert(tweets[1]);
+
+      tweets.push("I am going for dinner");
+
+      //console.log(tweets);
+
+      // deleting item starting from 1 and delete 2 items
+
+      tweets.splice(1, 2);
+
+      //console.log(tweets);
+
+      // add tweet at 1 , deteting 0 elements, value is good evening
+
+      tweets.splice(1, 0, "Good evening!", "get back to work");
+
+      // add tweet at 2 deleing 2 elements with given value
+
+      tweets.splice(2, 2, "fast and furious");
+
+      console.log(tweets);
+
+    </script>
+
+  </body>
+
+</html>

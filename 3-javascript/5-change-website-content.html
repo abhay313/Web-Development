@@ -1,0 +1,47 @@
+<html>
+
+  <head>
+    <title> Changing website Content </title>
+  </head>
+
+  <body>
+
+    <p id="firstpara"> Please, help us </p>
+
+    <button id="firstButton"> ChangeText </button>
+
+    <p id="secondpara"> Javascript is .....</p>
+
+    <button id="second-button"> button-two </button>
+
+    <p id="emptypara"></p>
+
+    <button id="createpara"> CreatePara </button>
+
+    <script type="text/javascript">
+
+      document.getElementById("firstButton").onclick = function(){
+
+        document.getElementById("firstpara").innerHTML = "Ok, We will";
+
+      }
+
+      document.getElementById("second-button").onclick = function(){
+
+        document.getElementById("secondpara").innerHTML = "I think " + document.getElementById("secondpara").innerHTML + "awesome";
+
+      }
+
+      document.getElementById("createpara").onclick = function(){
+
+        document.getElementById("emptypara").innerHTML= "<h1> Hi! there </h1>";
+
+      }
+
+    </script>
+
+
+
+  </body>
+
+</html>

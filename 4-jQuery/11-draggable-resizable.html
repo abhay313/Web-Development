@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <title>Draggable and Resizable</title>
+
+    <script type="text/javascript" src="jquery.js"></script>
+
+    <script src="jquery-ui/jquery-ui.js"></script>
+
+    <link href="jquery-ui/jquery-ui.css" rel="stylesheet">
+
+    <style type="text/css">
+
+      .box{
+        width: 400px;
+        height: 200px;
+        background-color: yellow;
+      }
+
+      #resizable{
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+      }
+
+      #resizableGrid{
+        margin-top: 100px;
+        width: 200px;
+        height: 200px;
+        background-color: green;
+      }
+
+      #also{
+        margin-top: 100px;
+        width: 200px;
+        height: 200px;
+        background-color: red;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <div id="draggable"> Drag Me Anywhere </div>
+
+    <div id="draggableX">move along X - axis </div>
+
+    <div id="draggableY">move along Y - axis </div>
+
+    <div class="box">
+
+      <span>I am stuck in the box </span>
+      <p>this is paragraph</p>
+
+    </div>
+
+    <div id="resizable"></div>
+
+    <div id="resizableGrid"></div>
+
+    <div id="also"></div>
+
+    <script type="text/javascript">
+
+      $("#draggable").draggable();
+
+      $("#draggableY").draggable({ axis: "y" });
+
+      $("#draggableX").draggable({ axis: "x" });
+
+      $("span").draggable({containment: "parent"});
+
+      $("p").draggable({containment: "parent"});
+      // paragragph can be draaggable only vertically because it contains whole width
+
+      $("#resizable").resizable();
+
+      $("#resizableGrid").resizable({
+
+        grid: 50,
+        alsoResize: "#also",
+        resize: function(event, ui){
+
+          if($("#also").width() > 300)
+          alert("big enough");
+
+        }
+
+      });
+
+      $("#also").resizable();
+
+    </script>
+
+  </body>
+
+</html>

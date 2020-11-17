@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <title>AJAX</title>
+
+    <script type="text/javascript" src="jquery.js"></script>
+
+  </head>
+
+  <body>
+
+    <p id="para">This is ajax </p>
+
+    <script type="text/javascript">
+
+      /** NOT WORK IN LOCAL HOST **/
+
+      // $.get("7.1-info.txt", function(data){
+      //
+      //   alert(data);
+      //
+      // })
+
+      $.ajax("info.txt")
+
+        .done(function(data){
+
+        //  alert(data);
+        $("#para").html = data;
+
+        })
+        .fail(function(){
+
+          alert("could not hold data");
+
+        })
+
+    </script>
+
+  </body>
+
+</html>

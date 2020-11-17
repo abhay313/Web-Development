@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <title> Changing Style </title>
+
+    <script type="text/javascript" src="jquery.js"></script>
+
+    <style type="text/css">
+
+      #circle{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: green;
+        margin: 50px;
+      }
+
+      .square{
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+        margin: 50px;
+      }
+
+    </style>
+
+
+
+  </head>
+
+  <body>
+
+    <div id="circle"></div>
+
+    <div class="square"></div>
+
+    <div class="square"></div>
+
+    <script type="text/javascript">
+
+      $("#circle").click(function() {
+
+      // to get the width of (body) webpage, which will change if narrow it;
+      alert($("body").css("width"))
+
+      // to get the value of a particular thing....
+      alert($("#circle").css("background-color"));
+
+      $("#circle").css("width", "400px");
+
+      $("#circle").css("background-color", "red");
+
+      })
+
+
+      // using this it will make only clicked object disappear.
+    /*  $("div").click(function(){
+
+        $(this).css("display", "none");
+
+      })  */
+
+      // using this it will make everything disappear
+      // $("div").click(function(){
+      //
+      //   $("div").css("display", "none");
+      //
+      // })
+
+      $("div").click(function(){
+
+        if($(this).attr("id") == "circle"){
+
+          alert("you clicked on circle");
+
+        }else{
+
+          alert("you clicked on square");
+          
+        }
+
+      })
+
+    </script>
+
+  </body>
+
+</html>

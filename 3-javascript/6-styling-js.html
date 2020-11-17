@@ -1,0 +1,42 @@
+<html>
+
+  <head>
+    <title> Styling in Javascript </title>
+  </head>
+
+  <body>
+
+    <p id="text"> This is for changing style </p>
+
+    <button id="styletext"> Change style </button>
+
+    <p id="text2"> This is for changing style </p>
+
+    <button id="styletext2"> Change style </button>
+
+    <p id="text3"> This is for changing style </p>
+
+    <button id="styletext3"> Change style </button>
+
+    <script type="text/javascript">
+
+      document.getElementById("styletext").onclick = function(){
+
+        document.getElementById("text").style.color = "red";
+      }
+
+      document.getElementById("styletext2").onclick = function(){
+
+        document.getElementById("text2").style.fontSize = "50px";
+      }
+
+      document.getElementById("styletext3").onclick = function(){
+
+        document.getElementById("text3").style.display = "none";
+      }
+
+    </script>
+
+  </body>
+
+</html>

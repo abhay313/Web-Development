@@ -1,0 +1,56 @@
+<html>
+
+  <head>
+    <title> If Else </title>
+  </head>
+
+  <body>
+
+    <p> What is magic word ?? </p>
+
+    <input type="text" id="input">
+
+    <p> <button id="checkingWord"> Check </button> </p>
+
+
+    <script type="text/javascript">
+
+    document.getElementById("checkingWord").onclick = function() {
+
+      var magicWord = "Abhay";
+
+      var inputText = document.getElementById("input").value;
+      
+      if(magicWord == inputText){
+
+        alert("Correct!!");
+
+      } else{
+
+        alert("Wrong!!");
+
+      }
+
+    }
+
+/*      var x = 11;
+
+      if(x % 2 == 0){
+
+        alert("x is even")
+
+      } else{
+
+        alert("x is odd")
+
+      }
+*/
+
+
+
+
+    </script>
+
+  </body>
+
+</html>

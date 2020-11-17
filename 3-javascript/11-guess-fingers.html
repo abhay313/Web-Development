@@ -1,0 +1,40 @@
+<html>
+
+  <head>
+    <title> Guess fingers </title>
+  </head>
+
+  <body>
+
+    <p> How many fingers do I have ? </p>
+
+    <input type="text" id="input">
+
+    <p> <button id="checkGuess"> CheckGuess </button> </p>
+
+
+    <script type="text/javascript">
+
+    document.getElementById("checkGuess").onclick = function(){
+
+      var randomNumber = Math.floor(Math.random() * 5) + 1;
+
+      var guessed = document.getElementById("input").value;
+
+      if(randomNumber == guessed){
+
+        alert("Great, you guessed it correctly!!");
+
+      } else{
+
+        alert("Nope! the numer was " + randomNumber);
+      }
+
+    }
+
+
+    </script>
+
+  </body>
+
+</html>
